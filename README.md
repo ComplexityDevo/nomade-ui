@@ -1,1 +1,3 @@
-# nomade-ui
+pnpm i
+
+pnpm dev

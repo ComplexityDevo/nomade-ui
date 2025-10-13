@@ -1,0 +1,56 @@
+# 🧱 Build output
+.svelte-kit/
+build/
+dist/
+.vite/
+vite.config.timestamp-*
+
+# 📦 Dependencias
+node_modules/
+
+# ⚙️ Archivos de entorno
+.env
+.env.*
+!.env.example
+
+# 🧪 Tests
+coverage/
+playwright-report/
+test-results/
+
+# 🧰 Logs y cachés
+*.log
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.seed
+*.pid.lock
+
+# 💅 Formatters y linters
+.eslintcache
+.stylelintcache
+.prettierignore
+.prettierrc.js
+
+# 🧾 Tipos y compilados
+*.tsbuildinfo
+*.d.ts
+
+# 🧠 IDE / Sistema
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# 🧹 Otros
+*.local
+.cache/
+tmp/
+temp/
+
+# 🚀 SvelteKit adapters (ej. node)
+.server/
