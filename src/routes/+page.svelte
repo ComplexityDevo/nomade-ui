@@ -1,7 +1,5 @@
 <script>
-  import { Button } from 'flowbite-svelte';
+ import MainSection from "$lib/components/MainSection.svelte";
 </script>
 
-<Button>Click me</Button>
-
-
+<MainSection/>
