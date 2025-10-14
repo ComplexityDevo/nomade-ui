@@ -21,7 +21,7 @@
 <!-- Botones -->
   <div class="flex md:order-2">
     <Button size="sm" class="bg-emerald-500 rounded-full mr-2 hover:bg-emerald-600 cursor-pointer focus:outline-none focus:ring-0 focus:shadow-none active:shadow-none" > Contacto </Button>
-    <Button size="sm" class="rounded-full">Emergencias</Button>
+    <Button size="sm" class="rounded-full cursor-pointer">Emergencias</Button>
     <NavHamburger />
   </div>
 
@@ -41,7 +41,6 @@
       <DropdownItem href="/">Certificados de exportacion</DropdownItem>
     </Dropdown>
 
-
     <NavLi class="text-base hover:!text-emerald-600" href="/about">Nosotros</NavLi>
 
     <NavLi class="text-base hover:!text-emerald-600" href="/docs/components/navbar">Tienda</NavLi>
@@ -49,6 +48,6 @@
     <NavLi class="text-base hover:!text-emerald-600" href="/pricing">Turnos</NavLi>
 
     <NavLi class="text-base hover:!text-emerald-600" href="/contact">Preguntas frecuentes</NavLi>
-    
+
   </NavUl>
 </Navbar>
