@@ -1,20 +1,51 @@
 <script lang="ts">
-  import { Heading, P, Button } from "flowbite-svelte";
+  import { deviceWidth, isPhone } from "$lib";
+  import { Heading, Button } from "flowbite-svelte";
   import { ArrowRightOutline } from "flowbite-svelte-icons";
-  let primaryColor = 'bg-green-600'
+
+  let title = "Veterinaria a domicilio";
+  let subtitle =
+    "Llevamos la atención directamente a tu casa, para que tu mascota se sienta cómoda y segura sin el estrés de salir o esperar en una clínica. Vos ganás comodidad y tiempo.";
+  let sectionButton = {
+    value: "Reservar Turno",
+    href: "/turnos",
+  };
+
+  let primaryColor = "bg-green-600";
 </script>
 
-<div class="flex flex-row mt-5 p-10 justify-around">
-    <div class="text-center basis-1/2 ">
-      <Heading tag="h1" class="mb-4 text-4xl font-extrabold  md:text-5xl lg:text-6xl">Veterinaria a domicilio</Heading>
-      <P class="mb-6 text-lg sm:px-16 lg:text-xl xl:px-48 dark:text-gray-400">Permitimos llevar la atención directamente a tu casa, así tu mascota se siente tranquila y cómoda sin el estrés de salir o esperar en una clínica. Además, vos ganás comodidad y tiempo</P>
-      <Button href="/" class="{primaryColor} hover:bg-emerald-600 cursor-pointer focus:outline-none focus:ring-0 focus:shadow-none active:shadow-none mt-10">
-        Turnos
-        <ArrowRightOutline class="ms-2 h-6 w-6" />
-      </Button>
-    </div>
+<div class="flex flex-col-reverse lg:flex-row items-start justify-between px-6 lg:px-16 py-6 gap-10">
+  <!-- Texto -->
+  <div class="flex-1 text-center lg:text-left">
+    <Heading
+      tag="h1"
+      class="mb-6 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 dark:text-gray-100"
+    >
+      {title}
+    </Heading>
+    <p class="text-md text-gray-700 dark:text-gray-300 max-w-prose">
+      {subtitle}
+    </p>
 
-    <div class="w-full h-100 flex justify-center items-center overflow-hidden basis-1/3">
-        <img src="/imagenes/imgInicio.jpg" alt="Imagen" class="object-cover w-full h-full rounded-lg" />
+    <Button
+      href={sectionButton.href}
+      class="{primaryColor} mt-8 px-6 py-3 text-lg font-semibold rounded-lg shadow-md hover:bg-emerald-500 transition duration-300 flex items-center justify-center gap-2"
+    >
+      {sectionButton.value}
+      <ArrowRightOutline class="h-5 w-5" />
+    </Button>
+  </div>
+
+  <!-- Imagen -->
+  {#if !$isPhone}
+    <div class="flex-1 flex justify-center items-center h-100">
+      <div class="h-100 overflow-hidden rounded-2xl shadow-xl transform transition duration-500 hover:scale-102">
+        <img
+          src="/imagenes/imgInicio.jpg"
+          alt="Veterinaria a domicilio"
+          class="w-full h-auto object-cover"
+        />
+      </div>
     </div>
+  {/if}
 </div>
