@@ -11,13 +11,12 @@
     href: "/turnos",
   };
 
-  const uploadsPath = import.meta.env.PUBLIC_UPLOADS_PATH;
   const isDev = import.meta.env.MODE === 'development';
   const base = import.meta.env.BASE_URL || '';
 
   const imgSrc = isDev 
     ? `${base}/imagenes/nomade_hero.png`  // ruta local en dev
-    : `${uploadsPath}/nomade_hero.png`; // ruta en prod
+    : `/uploads/avatars/nomade_hero.png`; // ruta en prod
 
   let primaryColor = "bg-green-600";
 
