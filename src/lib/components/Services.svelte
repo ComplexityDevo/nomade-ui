@@ -39,13 +39,13 @@ const servicios = [
 <div class=" mb-60">
   <Heading
     tag="h1"
-    class="mb-4 pt-10 text-center  text-2xl font-extrabold md:text-5xl lg:text-5xl"
+    class="my-2 lg:my-6 text-center  text-2xl font-extrabold md:text-5xl lg:text-5xl"
     >Servicios</Heading
   >
   
-  <section class="py-16 bg-white text-center">
+  <section class="py-6 bg-white text-center">
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-6 max-w-6xl mx-2">
     {#each servicios as s}
       <div class="flex flex-col items-center text-center">
         <div class={`flex items-center justify-center w-16 h-16 rounded-full text-white mb-4 bg-green-600`}>
