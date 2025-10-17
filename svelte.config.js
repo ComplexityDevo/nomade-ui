@@ -6,7 +6,10 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		paths: {
+			base: '/nomade'  // importante: aquí pones el subpath donde servirá
+		}
 	}
 };
 
