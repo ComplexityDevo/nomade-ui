@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { deviceWidth, isPhone } from "$lib";
+  import { isPhone } from "$lib";
   import { Heading, Button } from "flowbite-svelte";
   import { ArrowRightOutline } from "flowbite-svelte-icons";
 
@@ -19,8 +19,6 @@
     : `/uploads/avatars/nomade_hero.png`; // ruta en prod
 
   let primaryColor = "bg-green-600";
-
-  console.log('import.meta.env.NODE_ENV', import.meta.env.NODE_ENV)
 </script>
 
 <div class="flex flex-col-reverse lg:flex-row items-start justify-between px-6 lg:px-16 py-6 gap-10">
