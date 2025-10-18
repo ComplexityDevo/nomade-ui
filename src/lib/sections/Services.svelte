@@ -1,5 +1,5 @@
 <script>
-import { Heading } from "flowbite-svelte";
+    import SectionTitle from "$lib/components/SectionTitle.svelte";
 import {
   Stethoscope,
   Syringe,
@@ -8,7 +8,6 @@ import {
   User,
   FileText,
 } from "lucide-svelte";
-    import SectionTitle from "./SectionTitle.svelte";
 
 const servicios = [
   {

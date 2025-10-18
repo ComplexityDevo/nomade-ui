@@ -1,8 +1,7 @@
 <script>
-import SectionTitle from "./SectionTitle.svelte";
+import SectionTitle from "$lib/components/SectionTitle.svelte";
 
-export let nombre = "NOMADE";
-export let anios = "X";
+let { nombre = "NOMADE", anios = "10" } = $props();
 
 const isDev = import.meta.env.MODE === "development";
 const base = import.meta.env.BASE_URL || "";
@@ -48,7 +47,9 @@ const imgSrc = isDev
       </div>
 
       <!-- Imagen -->
-      <div class="flex justify-center">
+      <div
+        class="flex transform justify-center overflow-hidden rounded-2xl shadow-xl transition duration-500 hover:scale-102"
+      >
         <img
           src={imgSrc}
           alt="Veterinaria con gato"
