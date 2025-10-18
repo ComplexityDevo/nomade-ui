@@ -24,7 +24,7 @@ let primaryColor = "bg-green-600";
 </script>
 
 <div
-  class="flex flex-col-reverse items-start justify-between gap-10 px-6 py-6 lg:flex-row lg:px-16"
+  class="max-w-[1600px] m-auto flex flex-col-reverse items-center justify-between gap-10 px-6 py-6 lg:flex-row lg:px-16"
 >
   <!-- Texto -->
   <div class="flex-1 text-center lg:text-left">

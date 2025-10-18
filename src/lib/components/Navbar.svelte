@@ -11,20 +11,24 @@ import {
 } from "flowbite-svelte";
 import { ChevronDownOutline } from "flowbite-svelte-icons";
 import WhatsAppLink from "./WhatsAppLink.svelte";
+    import { isPhone } from "$lib";
 </script>
 
 <Navbar class="border-b border-neutral-200">
   <!-- BRAND -->
-  <NavBrand href="/">
+  <NavBrand>
     <img
       src="/nomade/imagenes/nomade-favicon-dark.svg"
       alt="Nomade Favicon"
       class="h-10 w-10"
     />
+    {#if !$isPhone}
+      
     <span
-      class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-      >NOMADE</span
+    class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+    >NOMADE</span
     >
+    {/if}
   </NavBrand>
 
   <!-- Botones -->
