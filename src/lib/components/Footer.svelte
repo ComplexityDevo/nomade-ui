@@ -4,21 +4,17 @@
   
   <footer class="footer">
     <nav class="nav">
-      <a href="/" class="nav-item">
+      <a href="#" class="nav-item">
         <i class="ph-house"></i>
         <span>Inicio</span>
       </a>
-      <a href="/citas" class="nav-item">
+      <a href="#" class="nav-item">
         <i class="ph-calendar"></i>
         <span>Citas</span>
       </a>
-      <a href="/mascotas" class="nav-item">
+      <a href="#" class="nav-item">
         <i class="ph-paw-print"></i>
         <span>Mascotas</span>
-      </a>
-      <a href="/perfil" class="nav-item">
-        <i class="ph-user"></i>
-        <span>Perfil</span>
       </a>
     </nav>
   

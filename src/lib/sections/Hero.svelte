@@ -1,5 +1,6 @@
 <script lang="ts">
 import { isPhone } from "$lib";
+import ContactWhap from "$lib/components/ContactWhap.svelte";
 import { Heading, Button } from "flowbite-svelte";
 import { ArrowRightOutline } from "flowbite-svelte-icons";
 
@@ -37,13 +38,18 @@ let primaryColor = "bg-green-600";
       {subtitle}
     </p>
 
-    <Button
-      href={sectionButton.href}
+    <!-- <Button
       class="{primaryColor} mt-8 flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-lg font-semibold shadow-md transition duration-300 hover:bg-emerald-500"
     >
-      {sectionButton.value}
-      <ArrowRightOutline class="h-5 w-5" />
-    </Button>
+    {sectionButton.value}
+    <ArrowRightOutline class="h-5 w-5" />
+  </Button> -->
+    <div class="my-8 rounded-lg text-lg font-semibold">
+      <ContactWhap
+        title={sectionButton.value}
+        mensaje={"Hola Nomade! Quisiera reservar una consulta"}
+      />
+    </div>
   </div>
 
   <!-- Imagen -->
