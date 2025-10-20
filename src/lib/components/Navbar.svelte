@@ -11,7 +11,7 @@ import {
 } from "flowbite-svelte";
 import { ChevronDownOutline } from "flowbite-svelte-icons";
 import WhatsAppLink from "./WhatsAppLink.svelte";
-    import { isPhone } from "$lib";
+import { isPhone, showFreqQues } from "$lib";
 </script>
 
 <Navbar class="border-b border-neutral-200">
@@ -23,11 +23,10 @@ import WhatsAppLink from "./WhatsAppLink.svelte";
       class="h-10 w-10"
     />
     {#if !$isPhone}
-      
-    <span
-    class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-    >NOMADE</span
-    >
+      <span
+        class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+        >NOMADE</span
+      >
     {/if}
   </NavBrand>
 
@@ -112,10 +111,11 @@ import WhatsAppLink from "./WhatsAppLink.svelte";
       </WhatsAppLink>
     </NavLi>
 
-    <NavLi class="text-base hover:!text-emerald-600">
-      <WhatsAppLink mensaje="Hola! Tengo una pregunta frecuente.">
-        <span>Preguntas frecuentes</span>
-      </WhatsAppLink>
+    <NavLi
+      class="text-base hover:!text-emerald-600"
+      onclick={()=>{showFreqQues.set(true)}}
+    >
+      <span>Preguntas frecuentes</span>
     </NavLi>
   </NavUl>
 </Navbar>
