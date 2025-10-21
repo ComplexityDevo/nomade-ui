@@ -16,7 +16,8 @@ import { isPhone, showFreqQues } from "$lib";
 
 <Navbar class="border-b border-neutral-200">
   <!-- BRAND -->
-  <NavBrand>
+
+  <NavBrand onclick={()=>{showFreqQues.set(false)}} class="cursor-pointer">
     <img
       src="/nomade/imagenes/nomade-favicon-dark.svg"
       alt="Nomade Favicon"
@@ -112,7 +113,7 @@ import { isPhone, showFreqQues } from "$lib";
     </NavLi>
 
     <NavLi
-      class="text-base hover:!text-emerald-600"
+      class="cursor-pointer text-base hover:!text-emerald-600"
       onclick={()=>{showFreqQues.set(true)}}
     >
       <span>Preguntas frecuentes</span>

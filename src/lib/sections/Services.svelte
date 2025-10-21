@@ -46,7 +46,7 @@ const servicios = [
 <div class="py-6">
   <SectionTitle title={'Servicios'} />
 
-  <section class="bg-white text-center">
+  <section class="bg-transparent text-center">
     <div
       class="mx-2 grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-6 lg:m-auto"
     >
