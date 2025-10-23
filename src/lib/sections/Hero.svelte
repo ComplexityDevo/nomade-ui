@@ -12,15 +12,18 @@ let {
   },
 } = $props();
 
+const isDev = import.meta.env.MODE === "development";
 const base = import.meta.env.BASE_URL || "";
 
-const imgSrc = `${base}/images/nomade_hero.png`
+const imgSrc = isDev
+  ? `${base}/images/nomade_hero.png` // ruta local en dev
+  : `/uploads/avatars/nomade_hero.png`; // ruta en prod
 
 let primaryColor = "bg-green-600";
 </script>
 
 <div
-  class="max-w-[1600px] m-auto flex flex-col-reverse items-center justify-between gap-10 px-6 py-6 lg:flex-row lg:px-16"
+  class="m-auto flex max-w-[1600px] flex-col-reverse items-center justify-between gap-10 px-6 py-6 lg:flex-row lg:px-16"
 >
   <!-- Texto -->
   <div class="flex-1 text-center lg:text-left">
