@@ -14,7 +14,7 @@ let {
 
 const base = import.meta.env.BASE_URL || "";
 
-const imgSrc = `${base}/imagenes/nomade_hero.png`
+const imgSrc = `${base}/images/nomade_hero.png`
 
 let primaryColor = "bg-green-600";
 </script>

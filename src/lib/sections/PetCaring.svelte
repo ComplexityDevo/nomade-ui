@@ -11,7 +11,7 @@ const isDev = import.meta.env.MODE === "development";
 const base = import.meta.env.BASE_URL || "";
 
 const imgSrc = isDev
-  ? `${base}/imagenes/nomade_care.png` // ruta local en dev
+  ? `${base}/images/nomade_care.png` // ruta local en dev
   : `/uploads/avatars/nomade_care.png`; // ruta en prod
 </script>
 
