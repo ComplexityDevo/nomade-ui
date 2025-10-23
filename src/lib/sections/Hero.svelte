@@ -2,7 +2,6 @@
 import { isPhone } from "$lib";
 import ContactWhap from "$lib/components/ContactWhap.svelte";
 import { Heading, Button } from "flowbite-svelte";
-import { ArrowRightOutline } from "flowbite-svelte-icons";
 
 let {
   title = "Veterinaria a domicilio",
@@ -13,12 +12,9 @@ let {
   },
 } = $props();
 
-const isDev = import.meta.env.MODE === "development";
 const base = import.meta.env.BASE_URL || "";
 
-const imgSrc = isDev
-  ? `${base}/imagenes/nomade_hero.png` // ruta local en dev
-  : `/uploads/avatars/nomade_hero.png`; // ruta en prod
+const imgSrc = `${base}/imagenes/nomade_hero.png`
 
 let primaryColor = "bg-green-600";
 </script>
