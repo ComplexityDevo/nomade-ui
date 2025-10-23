@@ -8,7 +8,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: '/nomade'  // importante: aquí pones el subpath donde servirá
+			base: '/nomade'
 		}
 	}
 };

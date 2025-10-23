@@ -19,7 +19,7 @@ import { isPhone, showFreqQues } from "$lib";
 
   <NavBrand onclick={()=>{showFreqQues.set(false)}} class="cursor-pointer">
     <img
-      src="/nomade/imagenes/nomade-favicon-dark.svg"
+      src="/nomade/images/nomade-favicon-dark.svg"
       alt="Nomade Favicon"
       class="h-10 w-10"
     />
