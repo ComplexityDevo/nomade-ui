@@ -12,12 +12,7 @@ let {
   },
 } = $props();
 
-const isDev = import.meta.env.MODE === "development";
-const base = import.meta.env.BASE_URL || "";
-
-const imgSrc = isDev
-  ? `${base}/images/nomade_hero.png` // ruta local en dev
-  : `/uploads/avatars/nomade_hero.png`; // ruta en prod
+const imgSrc = `/images/nomade_hero.png` // ruta local en dev
 
 let primaryColor = "bg-green-600";
 </script>

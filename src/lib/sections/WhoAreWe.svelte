@@ -3,12 +3,7 @@ import SectionTitle from "$lib/components/SectionTitle.svelte";
 
 let { nombre = "NOMADE", anios = "10" } = $props();
 
-const isDev = import.meta.env.MODE === "development";
-const base = import.meta.env.BASE_URL || "";
-
-const imgSrc = isDev
-  ? `${base}/images/nomade_waw.png` // ruta local en dev
-  : `/uploads/avatars/nomade_waw.png`; // ruta en prod
+const imgSrc = `/images/nomade_waw.png`
 </script>
 
 <section class="w-full bg-white px-6 py-6 md:px-12 lg:px-24">
