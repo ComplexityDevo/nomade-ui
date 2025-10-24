@@ -5,7 +5,7 @@ import PetCaring from "$lib/sections/PetCaring.svelte";
 import Services from "$lib/sections/Services.svelte";
 import WhoAreWe from "$lib/sections/WhoAreWe.svelte";
 import FAQ from "$lib/sections/FAQ.svelte";
-import { PawPrint } from "lucide-svelte"; // Importa el ícono 'paw-print'
+import { PawPrint } from "lucide-svelte";
 
 // const handleAction = (action: { id: string; content: any }) => {
 //   switch (action.id) {

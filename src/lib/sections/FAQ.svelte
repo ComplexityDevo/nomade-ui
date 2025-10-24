@@ -1,6 +1,5 @@
 <script lang="ts">
 import { fade } from "svelte/transition";
-import { goto } from "$app/navigation";
 import { ArrowLeft, ChevronDown } from "lucide-svelte";
 import { showFreqQues } from "$lib";
 
