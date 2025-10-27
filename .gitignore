@@ -54,3 +54,6 @@ temp/
 
 # 🚀 SvelteKit adapters (ej. node)
 .server/
+
+# 🌐 Vercel build cache y config
+.vercel/
