@@ -2,7 +2,7 @@
     const year = new Date().getFullYear();
   </script>
   
-  <footer class="footer">
+  <footer class="footer !bg-orange-100">
     <nav class="nav">
       <a href="#" class="nav-item">
         <i class="ph-house"></i>

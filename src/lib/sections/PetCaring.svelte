@@ -10,7 +10,7 @@ let {
 const imgSrc = `/images/nomade_care.png`
 </script>
 
-<section class="w-full bg-white px-6 py-16 text-center md:px-12 lg:px-24">
+<section class="w-full bg-transparent px-6 py-16 text-center md:px-12 lg:px-24">
   <div class="mx-auto max-w-4xl">
     <SectionTitle title={titulo} />
     <p class="mb-10 text-gray-500">{subtitulo}</p>
