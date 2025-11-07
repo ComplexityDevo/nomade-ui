@@ -16,7 +16,7 @@ import { PawPrint } from "lucide-svelte"; // Importa el ícono 'paw-print'
 // };
 </script>
 
-<div class={`max-w-[${$deviceWidth}px] mb-32`}>
+<div class={`max-w-[${$deviceWidth}px] pb-16 bg-yellow-50`}>
   <section>
     <!-- Fondo decorativo -->
     {#if !$isPhone}

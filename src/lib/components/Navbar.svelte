@@ -14,7 +14,7 @@ import WhatsAppLink from "./WhatsAppLink.svelte";
 import { isPhone, showFreqQues } from "$lib";
 </script>
 
-<Navbar class="border-b border-neutral-200">
+<Navbar class="border-b border-neutral-200 bg-orange-100">
   <!-- BRAND -->
 
   <NavBrand onclick={()=>{showFreqQues.set(false)}} class="cursor-pointer">

@@ -5,14 +5,14 @@ import { Heading, Button } from "flowbite-svelte";
 
 let {
   title = "Veterinaria a domicilio",
-  subtitle = "Llevamos la atención directamente a tu casa, para que tu mascota se sienta cómoda y segura sin el estrés de salir o esperar en una clínica. Vos ganás comodidad y tiempo.",
+  subtitle = `En <strong>NOMADE</strong> nuestro objetivo es brindar <strong>atención veterinaria profesional</strong>, <strong>inmediata</strong> y de <strong>calidad</strong>, en la comodidad del hogar. <br><br> Buscamos <strong>reducir el estrés</strong> del paciente, <strong>facilitando el acceso</strong> a la atención médica y acompañando a cada familia con <strong>empatía</strong> y <strong>compromiso</strong>, promoviendo una <strong>medicina integrativa</strong> que <strong>prioriza el bienestar</strong> en cada etapa de la vida.`,
   sectionButton = {
     value: "Reservar Turno",
     href: "/turnos",
   },
 } = $props();
 
-const imgSrc = `/images/nomade_hero.png` // ruta local en dev
+const imgSrc = `/images/nomade_hero.jpg` // ruta local en dev
 
 let primaryColor = "bg-green-600";
 </script>
@@ -29,7 +29,7 @@ let primaryColor = "bg-green-600";
       {title}
     </Heading>
     <p class="text-md max-w-prose text-gray-700 dark:text-gray-300">
-      {subtitle}
+      {@html subtitle}
     </p>
 
     <!-- <Button
@@ -50,12 +50,12 @@ let primaryColor = "bg-green-600";
   {#if !$isPhone}
     <div class="flex h-100 flex-1 items-center justify-center">
       <div
-        class="h-100 transform overflow-hidden rounded-2xl shadow-xl transition duration-500 hover:scale-102"
+        class="h-100 transform overflow-hidden rounded-xl shadow-xl transition duration-500 hover:scale-102"
       >
         <img
           src={imgSrc}
           alt="Veterinaria a domicilio"
-          class="h-auto w-full object-cover"
+          class="h-auto w-full object-cover transform -translate-y-6"
         />
       </div>
     </div>

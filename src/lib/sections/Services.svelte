@@ -12,22 +12,22 @@ import {
 const servicios = [
   {
     icon: Stethoscope,
-    titulo: "Consultas a domicilio",
+    titulo: "Consulta a domicilio",
     descripcion: "Medicina general y de especialidad a domicilio",
   },
   {
     icon: Syringe,
-    titulo: "Vacunas a domicilio",
+    titulo: "Nuestros productos",
     descripcion: "Anuales, gatitos y cachorros",
   },
   {
     icon: FlaskConical,
-    titulo: "Laboratorio",
+    titulo: "Toma de muestras",
     descripcion: "Sangre, orina.",
   },
   {
     icon: PhoneCall,
-    titulo: "Teleconsultas",
+    titulo: "Teleconsulta",
     descripcion: "Con 1 o 2 horas de anticipación.",
   },
   {
@@ -37,29 +37,39 @@ const servicios = [
   },
   {
     icon: FileText,
-    titulo: "Certificados de viaje",
+    titulo: "Certificado de viaje",
+    descripcion: "Para viajar al extranjero sin agobios",
+  },
+  {
+    icon: FileText,
+    titulo: "Plan sanitario",
+    descripcion: "VACUNAS-DESPARASITACIONES",
+  },
+  {
+    icon: FileText,
+    titulo: "Asesoramiento nutricional",
     descripcion: "Para viajar al extranjero sin agobios",
   },
 ];
 </script>
 
-<div class="py-6">
+<div class="px-6 py-6 lg:px-16">
   <SectionTitle title={'Servicios'} />
 
   <section class="bg-transparent text-center">
     <div
-      class="mx-2 grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-6 lg:m-auto"
+      class="mx-2 flex flex-wrap max-w-6xl gap-3 justify-around items-start sm: lg: lg: lg:m-auto"
     >
       {#each servicios as s}
-        <div class="flex h-full flex-col items-center text-center">
+        <div class="flex h-full flex-col items-center text-center max-w-[120px]">
           <div
             class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-600 text-white"
           >
             <s.icon class="h-7 w-7" />
           </div>
-          <h3 class="text-lg font-semibold text-gray-800">{s.titulo}</h3>
+          <h3 class="text-sm !font-normal text-gray-800">{s.titulo}</h3>
           <!-- Este es el truco -->
-          <p class="text-sm text-black">{s.descripcion}</p>
+          <!-- <p class="text-sm text-black">{s.descripcion}</p> -->
         </div>
       {/each}
     </div>
