@@ -1,7 +1,8 @@
 <script lang="ts">
 import { isPhone } from "$lib";
 import ContactWhap from "$lib/components/ContactWhap.svelte";
-import { Heading, Button } from "flowbite-svelte";
+import { Heading } from "flowbite-svelte";
+import { PawPrint,Cross } from "lucide-svelte";
 
 let {
   title = "Veterinaria a domicilio",
@@ -12,23 +13,28 @@ let {
   },
 } = $props();
 
-const imgSrc = `/images/nomade_hero.jpg` // ruta local en dev
+const imgSrc = `/images/nomade_hero2.png` // ruta local en dev
 
-let primaryColor = "bg-green-600";
 </script>
-
+ <!-- Fondo decorativo -->
+    {#if !$isPhone}
+      <Cross
+        class="pointer-events-none absolute top-120 left-10 z-10 h-64 w-64 text-blue-300 opacity-15"
+        aria-hidden="true"
+      />
+    {/if}
 <div
-  class="m-auto flex max-w-[1600px] flex-col-reverse items-center justify-between gap-10 px-6 py-6 lg:flex-row lg:px-16"
+  class="m-auto flex max-w-[1600px] flex-col-reverse items-center justify-between px-6 py-6 lg:flex-row lg:px-16 "
 >
   <!-- Texto -->
-  <div class="flex-1 text-center lg:text-left">
+  <div class="flex-1 text-center lg:text-left bg-transparent">
     <Heading
       tag="h1"
-      class="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-100"
+      class="mb-2 text-4xl leading-tight font-extrabold text-[#8fc1cf] md:text-5xl lg:text-6xl dark:text-gray-100"
     >
       {title}
     </Heading>
-    <p class="text-md max-w-prose text-gray-700 dark:text-gray-300">
+    <p class="text-md max-w-[80%] text-center text-gray-700 dark:text-gray-300">
       {@html subtitle}
     </p>
 
@@ -38,6 +44,7 @@ let primaryColor = "bg-green-600";
     {sectionButton.value}
     <ArrowRightOutline class="h-5 w-5" />
   </Button> -->
+
     <div class="my-8 rounded-lg text-lg font-semibold">
       <ContactWhap
         title={sectionButton.value}
@@ -50,12 +57,12 @@ let primaryColor = "bg-green-600";
   {#if !$isPhone}
     <div class="flex h-100 flex-1 items-center justify-center">
       <div
-        class="h-100 transform overflow-hidden rounded-xl shadow-xl transition duration-500 hover:scale-102"
+        class="mask-y-from-98% mask-y-to-100% h-100 transform overflow-hidden rounded-xl shadow-xl transition duration-500 hover:scale-102"
       >
         <img
           src={imgSrc}
           alt="Veterinaria a domicilio"
-          class="h-auto w-full object-cover transform -translate-y-6"
+          class="h-auto w-full object-cover scale-125 translate-y-[-35%] "
         />
       </div>
     </div>

@@ -14,9 +14,9 @@ import WhatsAppLink from "./WhatsAppLink.svelte";
 import { isPhone, showFreqQues } from "$lib";
 </script>
 
-<Navbar class="border-b border-neutral-200 bg-orange-100">
+<Navbar class="border-b border-neutral-200 bg-[#548395]">
+  
   <!-- BRAND -->
-
   <NavBrand onclick={()=>{showFreqQues.set(false)}} class="cursor-pointer">
     <img
       src="/images/nomade-favicon-dark.svg"
@@ -32,13 +32,13 @@ import { isPhone, showFreqQues } from "$lib";
   </NavBrand>
 
   <!-- Botones -->
-  <div class="flex md:order-2">
+  <div class="flex md:order-2 ">
     <WhatsAppLink
       mensaje="¡Hola! Quisiera más info sobre tus servicios, gracias!"
     >
       <Button
         size="sm"
-        class="mr-2 cursor-pointer rounded-full bg-emerald-500 hover:bg-emerald-600 focus:shadow-none focus:ring-0 focus:outline-none active:shadow-none"
+        class="mr-2 cursor-pointer rounded-full bg-blue-400 hover:bg-blue-500 focus:shadow-none focus:ring-0 focus:outline-none active:shadow-none"
       >
         Contacto
       </Button>
@@ -52,9 +52,9 @@ import { isPhone, showFreqQues } from "$lib";
   </div>
 
   <!-- LINKS -->
-  <NavUl class="order-1">
+  <NavUl class="order-1 ">
     <!-- Servicios dropdown -->
-    <NavLi class="cursor-pointer text-base hover:!text-emerald-600">
+    <NavLi class="cursor-pointer text-white hover:!text-emerald-600 text-xl">
       Servicios <ChevronDownOutline
         class="inline h-6 w-6 text-secondary-800 dark:text-white"
       />
@@ -94,26 +94,26 @@ import { isPhone, showFreqQues } from "$lib";
       </DropdownItem>
     </Dropdown>
 
-    <NavLi class="text-base hover:!text-emerald-600">
+    <NavLi class="text-white hover:!text-emerald-600">
       <WhatsAppLink mensaje="Hola! Quisiera saber más sobre ustedes.">
         <span>Nosotros</span>
       </WhatsAppLink>
     </NavLi>
 
-    <NavLi class="text-base hover:!text-emerald-600">
+    <NavLi class="text-white hover:!text-emerald-600">
       <WhatsAppLink mensaje="Hola! Quiero información sobre la Tienda.">
         <span>Tienda</span>
       </WhatsAppLink>
     </NavLi>
 
-    <NavLi class="text-base hover:!text-emerald-600">
+    <NavLi class="text-white hover:!text-emerald-600">
       <WhatsAppLink mensaje="Hola! Quiero sacar un Turno.">
         <span>Turnos</span>
       </WhatsAppLink>
     </NavLi>
 
     <NavLi
-      class="cursor-pointer text-base hover:!text-emerald-600"
+      class="cursor-pointer text-white hover:!text-emerald-600"
       onclick={()=>{showFreqQues.set(true)}}
     >
       <span>Preguntas frecuentes</span>
