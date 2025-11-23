@@ -30,11 +30,11 @@ const imgSrc = `/images/nomade_hero2.png` // ruta local en dev
   <div class="flex-1 text-center lg:text-left bg-transparent">
     <Heading
       tag="h1"
-      class="mb-2 text-4xl leading-tight font-extrabold text-[#8fc1cf] md:text-5xl lg:text-6xl dark:text-gray-100"
+      class="mb-2 text-4xl leading-tight font-extrabold text-blue-950 md:text-5xl lg:text-6xl text-center dark:text-gray-100"
     >
       {title}
     </Heading>
-    <p class="text-md max-w-[80%] text-center text-gray-700 dark:text-gray-300">
+    <p class="text-md max-w-[80%] text-center text-gray-700 dark:text-gray-300 display-block m-auto">
       {@html subtitle}
     </p>
 
@@ -45,12 +45,12 @@ const imgSrc = `/images/nomade_hero2.png` // ruta local en dev
     <ArrowRightOutline class="h-5 w-5" />
   </Button> -->
 
-    <div class="my-8 rounded-lg text-lg font-semibold">
-      <ContactWhap
-        title={sectionButton.value}
-        mensaje={"Hola Nomade! Quisiera reservar una consulta"}
-      />
-    </div>
+    <div class="contact-wrapper">
+  <ContactWhap
+    title={sectionButton.value}
+    mensaje={"Hola Nomade! Quisiera reservar una consulta"}
+  />
+</div>
   </div>
 
   <!-- Imagen -->
@@ -68,3 +68,21 @@ const imgSrc = `/images/nomade_hero2.png` // ruta local en dev
     </div>
   {/if}
 </div>
+
+<style>
+  /* keyframes y clase local (carga inmediata) */
+  @keyframes wiggleX {
+    0%, 100% { transform: translateX(0); }
+    50%     { transform: translateX(6px); }
+  }
+
+  .contact-wrapper {
+   /* evita que ocupe todo el ancho si querés */
+    animation: wiggleX 2.5s ease-in-out infinite;
+    /* opcionales para suavizar */
+    will-change: transform;
+    align-self: center;
+    max-width: 200px ;
+    margin: 30px auto ;
+  }
+</style>

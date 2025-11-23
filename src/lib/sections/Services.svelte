@@ -63,7 +63,7 @@ const servicios = [
       {#each servicios as s}
         <div class="flex h-full flex-col items-center text-center w-[100px]">
           <div
-            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#b898ce] text-white"
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#80abbd] text-white"
           >
             <s.icon class="h-7 w-7" />
           </div>
@@ -79,6 +79,6 @@ const servicios = [
 <style>
   
   .rata{
-    background-color:#b898ce;
+    background-color:#80abbd;
   }
 </style>

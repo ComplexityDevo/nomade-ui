@@ -7,6 +7,7 @@ import WhoAreWe from "$lib/sections/WhoAreWe.svelte";
 import FAQ from "$lib/sections/FAQ.svelte";
 import { PawPrint } from "lucide-svelte"; // Importa el ícono 'paw-print'
     import { img } from "flowbite-svelte";
+    import BannerDivider from "$lib/components/BannerDivider.svelte";
 
 const imgSrc = `/images/nomade_hero2.png`
 
@@ -24,6 +25,7 @@ const imgSrc = `/images/nomade_hero2.png`
     {#if $showFreqQues}
       <FAQ />
     {:else}
+    <BannerDivider/>
       <Hero />
       <Services />
       <WhoAreWe />

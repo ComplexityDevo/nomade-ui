@@ -9,23 +9,24 @@ import {
   Dropdown,
   DropdownItem,
 } from "flowbite-svelte";
+ import { GradientButton } from "flowbite-svelte";
 import { ChevronDownOutline } from "flowbite-svelte-icons";
 import WhatsAppLink from "./WhatsAppLink.svelte";
 import { isPhone, showFreqQues } from "$lib";
 </script>
 
-<Navbar class="border-b border-neutral-200 bg-[#548395]">
+<Navbar class="border-b border-neutral-200 bg-[#80abbd]">
   
   <!-- BRAND -->
   <NavBrand onclick={()=>{showFreqQues.set(false)}} class="cursor-pointer">
     <img
       src="/images/nomade-favicon-dark.svg"
       alt="Nomade Favicon"
-      class="h-10 w-10"
+      class="h-12 w-12"
     />
     {#if !$isPhone}
       <span
-        class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+        class="self-center text-3xl text-white font-semibold whitespace-nowrap dark:text-white"
         >NOMADE</span
       >
     {/if}
@@ -38,7 +39,7 @@ import { isPhone, showFreqQues } from "$lib";
     >
       <Button
         size="sm"
-        class="mr-2 cursor-pointer rounded-full bg-blue-400 hover:bg-blue-500 focus:shadow-none focus:ring-0 focus:outline-none active:shadow-none"
+        class="mr-2 cursor-pointer text-xl rounded-xl bg-blue-900  hover:bg-blue-700 focus:shadow-none focus:ring-0 focus:outline-none active:shadow-none"
       >
         Contacto
       </Button>
@@ -46,7 +47,7 @@ import { isPhone, showFreqQues } from "$lib";
     <WhatsAppLink
       mensaje="Hola Nomade! Tengo una urgencia y necesito ayuda inmediata!"
     >
-      <Button size="sm" class="cursor-pointer rounded-full">Emergencias</Button>
+      <Button size="sm" class="cursor-pointer rounded-xl text-xl">Emergencias</Button>
     </WhatsAppLink>
     <NavHamburger />
   </div>
@@ -54,7 +55,7 @@ import { isPhone, showFreqQues } from "$lib";
   <!-- LINKS -->
   <NavUl class="order-1 ">
     <!-- Servicios dropdown -->
-    <NavLi class="cursor-pointer text-white hover:!text-emerald-600 text-xl">
+    <NavLi class="cursor-pointer text-white hover:!text-blue-950 text-xl">
       Servicios <ChevronDownOutline
         class="inline h-6 w-6 text-secondary-800 dark:text-white"
       />
@@ -94,26 +95,26 @@ import { isPhone, showFreqQues } from "$lib";
       </DropdownItem>
     </Dropdown>
 
-    <NavLi class="text-white hover:!text-emerald-600">
+    <NavLi class="text-white hover:!text-blue-950 text-xl  ">
       <WhatsAppLink mensaje="Hola! Quisiera saber más sobre ustedes.">
         <span>Nosotros</span>
       </WhatsAppLink>
     </NavLi>
 
-    <NavLi class="text-white hover:!text-emerald-600">
+    <NavLi class="text-white hover:!text-blue-950 text-xl">
       <WhatsAppLink mensaje="Hola! Quiero información sobre la Tienda.">
         <span>Tienda</span>
       </WhatsAppLink>
-    </NavLi>
-
-    <NavLi class="text-white hover:!text-emerald-600">
+    </NavLi> 
+      
+    <NavLi class="text-white hover:!text-blue-950 text-xl">
       <WhatsAppLink mensaje="Hola! Quiero sacar un Turno.">
         <span>Turnos</span>
       </WhatsAppLink>
     </NavLi>
 
     <NavLi
-      class="cursor-pointer text-white hover:!text-emerald-600"
+      class="cursor-pointer text-white hover:!text-blue-950 text-xl"
       onclick={()=>{showFreqQues.set(true)}}
     >
       <span>Preguntas frecuentes</span>
