@@ -3,7 +3,7 @@ import SectionTitle from "$lib/components/SectionTitle.svelte";
 
 let { nombre = "NOMADE", anios = "10" } = $props();
 
-const imgSrc = `/images/nomade_waw.png`
+const imgSrc = `/images/leonpng.png`
 </script>
 
 <section class="w-full bg-transparent px-6 py-6 md:px-12 lg:px-24">
@@ -64,12 +64,12 @@ const imgSrc = `/images/nomade_waw.png`
 
       <!-- Imagen -->
       <div
-        class="flex transform justify-center overflow-hidden rounded-2xl shadow-xl transition duration-500 hover:scale-102"
+        class="flex transform justify-center overflow-hidden rounded-2xl transition duration-500 hover:scale-102"
       >
         <img
           src={imgSrc}
           alt="Veterinaria con gato"
-          class="max-h-[400px] w-full rounded-2xl object-cover shadow-lg"
+          class="max-h-[500px] w-full  object-cover"
           loading="lazy"
         />
       </div>

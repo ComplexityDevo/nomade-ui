@@ -7,7 +7,18 @@ export default {
     './node_modules/flowbite/**/*.{js,ts}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      keyframes: {
+        wiggleX: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(6px)' },
+        },
+      },
+      animation: {
+        wiggleX: 'wiggleX 2.5s ease-in-out infinite',
+      },
+      
+    },
   },
   plugins: [
     flowbite,

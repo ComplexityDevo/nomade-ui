@@ -16,7 +16,7 @@ const servicios = [
     descripcion: "Medicina general y de especialidad a domicilio",
   },
   {
-    icon: Syringe,
+    icon: User,
     titulo: "Nuestros productos",
     descripcion: "Anuales, gatitos y cachorros",
   },
@@ -31,7 +31,7 @@ const servicios = [
     descripcion: "Con 1 o 2 horas de anticipación.",
   },
   {
-    icon: User,
+    icon: Syringe,
     titulo: "Eutanasia",
     descripcion: "Dormimos tu mascota en su casa",
   },
@@ -58,12 +58,12 @@ const servicios = [
 
   <section class="bg-transparent text-center">
     <div
-      class="mx-2 flex flex-wrap max-w-6xl gap-3 justify-around items-start sm: lg: lg: lg:m-auto"
+      class="mx-2 flex flex-wrap max-w-6xl gap-3 justify-around items-start sm: lg: lg: lg:m-auto z-20 relative"
     >
       {#each servicios as s}
-        <div class="flex h-full flex-col items-center text-center max-w-[120px]">
+        <div class="flex h-full flex-col items-center text-center w-[100px]">
           <div
-            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-600 text-white"
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#80abbd] text-white"
           >
             <s.icon class="h-7 w-7" />
           </div>
@@ -75,3 +75,10 @@ const servicios = [
     </div>
   </section>
 </div>
+
+<style>
+  
+  .rata{
+    background-color:#80abbd;
+  }
+</style>
