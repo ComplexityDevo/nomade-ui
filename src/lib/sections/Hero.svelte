@@ -30,7 +30,7 @@ const imgSrc = `/images/nomade_hero2.png` // ruta local en dev
   <div class="flex-1 text-center lg:text-left bg-transparent">
     <Heading
       tag="h1"
-      class="mb-2 text-4xl leading-tight font-extrabold text-blue-950 md:text-5xl lg:text-6xl text-center dark:text-gray-100"
+      class="mb-2 text-6xl leading-tight font-black text-blue-950 md:text-5xl lg:text-6xl text-center dark:text-gray-100"
     >
       {title}
     </Heading>

@@ -5,9 +5,8 @@ import PetCaring from "$lib/sections/PetCaring.svelte";
 import Services from "$lib/sections/Services.svelte";
 import WhoAreWe from "$lib/sections/WhoAreWe.svelte";
 import FAQ from "$lib/sections/FAQ.svelte";
-import { PawPrint } from "lucide-svelte"; // Importa el ícono 'paw-print'
-    import { img } from "flowbite-svelte";
-    import BannerDivider from "$lib/components/BannerDivider.svelte";
+import { PawPrint } from "lucide-svelte";
+import BannerDivider from "$lib/components/BannerDivider.svelte";
 
 const imgSrc = `/images/nomade_hero2.png`
 
@@ -17,7 +16,7 @@ const imgSrc = `/images/nomade_hero2.png`
 //       showFreqQuestions = !showFreqQuestions;
 //       break;
 //   }
-// };
+// }; 
 </script>
 
 <div class={`max-w-[${$deviceWidth}px] pb-16 `}>
@@ -25,7 +24,7 @@ const imgSrc = `/images/nomade_hero2.png`
     {#if $showFreqQues}
       <FAQ />
     {:else}
-    <BannerDivider/>
+      <BannerDivider/>
       <Hero />
       <Services />
       <WhoAreWe />
