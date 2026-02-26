@@ -75,10 +75,3 @@ const servicios = [
     </div>
   </section>
 </div>
-
-<style>
-  
-  .rata{
-    background-color:#80abbd;
-  }
-</style>
